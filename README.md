@@ -16,6 +16,7 @@ I most recently used node-postgres in a personal project, so it was fresher in m
 This was only done in a couple hours, so this is missing some little features:
 * Nothing is done to check whether all of the fields in addBook/editBook have valid content
 * POST requests are very basic and do not perform any kind of authentication
+* There is no error handling, it just crashes when a problem occurs
 
 # Database schema
 The database is simple. It contains a single table called books with the following columns:
