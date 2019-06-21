@@ -13,7 +13,7 @@ These two were picked because of how familiar I am with the frameworks.
 I most recently used node-postgres in a personal project, so it was fresher in my mind than other packages.
 
 # Changes to be made
-This was only done in a couple hours, so this is missing some little features:
+This was only done in a couple hours, so this is missing some features:
 * Nothing is done to check whether all of the fields in addBook/editBook have valid content
 * POST requests are very basic and do not perform any kind of authentication
 * There is no error handling, it just crashes when a problem occurs
