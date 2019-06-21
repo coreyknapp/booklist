@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        title BookList - Edit Book
+        style(type="text/css").
+            input {
+                margin: 5px;
+            }
+    body
+        include ./templates/header.jade
+        form(action='/update', method='post')
+            p
+                label(for='id') ID:
+                input(id='id', name='id', type='text', value=book.id, readonly)
+            p
+                label(for='title') Title:
+                input(id='title', name='title', type='text', value=book.title)
+            p
+                label(for='author') Author:
+                input(id='author', name='author', type='text', value=book.author)
+            p
+                label(for='isbn') ISBN:
+                input(id='isbn', name='isbn', type='text', value=book.isbn)
+            p
+                label(for='pages') Number of Pages:
+                input(id='pages', name='pages', type='number', value=book.pages)
+            p
+                select(name='finished')
+                    option(value='true', selected=book.finished) Finished reading
+                    option(value='false', selected=!book.finished) Have not finished reading
+            input(type='submit', value='Update Book')

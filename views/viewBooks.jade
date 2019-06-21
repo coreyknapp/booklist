@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+        title BookList - View Books
+        style(type="text/css").
+            table, td, th {
+                border: 1px solid black;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            th {
+                height: 50px;
+            }
+    body
+        include ./templates/header.jade
+        table
+            tr
+                th Book Title
+                th Author
+                th ISBN
+                th # of Pages
+                th Finished?
+                th Edit
+                th Delete
+            each book in bookList
+                tr
+                    td=book.title
+                    td=book.author
+                    td=book.isbn
+                    td=book.pages
+                    td=book.finished
+                    td
+                        a(href="/editBook?id=" + book.id) Edit
+                    td
+                        a(href="/delete?id=" + book.id) Delete

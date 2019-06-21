@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title BookList - Add Book
+        style(type="text/css").
+            input {
+                margin: 5px;
+            }
+    body
+        include ./templates/header.jade
+        form(action='/create', method='post')
+            p
+                label(for='title') Title:
+                input(id='title', name='title', type='text')
+            p
+                label(for='author') Author:
+                input(id='author', name='author', type='text')
+            p
+                label(for='isbn') ISBN:
+                input(id='isbn', name='isbn', type='text')
+            p
+                label(for='pages') Number of Pages:
+                input(id='pages', name='pages', type='number')
+            p
+                select(name='finished')
+                    option(value='true', selected) Finished reading
+                    option(value='false') Have not finished reading
+            input(type='submit', value='Add Book')
