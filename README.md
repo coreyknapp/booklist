@@ -1,6 +1,6 @@
 # Booklist
 
-Short project to demonstrate CRUD operations in Node.js using an MVC pattern.
+Short project made for a job interview to demonstrate CRUD operations in Node.js using an MVC pattern.
 
 # Stack
 ## Jade
